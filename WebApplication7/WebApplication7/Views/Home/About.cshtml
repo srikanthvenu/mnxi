@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/datepicker.css">
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/bootstrpdatepicker/bootstrap-datepicker.js"></script>
+<script src="~/Scripts/noty/jquery.noty.js"></script>
+<script src="~/Scripts/noty/layouts/topCenter.js"></script>
+<script src="~/Scripts/noty/themes/default.js"></script>
+<script src="~/Scripts/noty/layouts/center.js"></script>
+<script src="~/Scripts/json2.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        
+   
+        $('.date').datepicker({
+            weekStart: 2,
+            startDate: "01/10/2013",
+            format: 'mm/dd/yyyy',
+
+            forceParse: false,
+            autoclose: true
+        });
+  
+      
+
+    });
+
+
+
+ 
+
+</script>
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+ 
+
+
+<div class="container">
+    <p>
+        <div class="col-xs-2" style="float:left">
+
+            <label for="srvFrmdate">From</label>
+            <div class="input-group date " style="float:left">
+
+                <input class="form-control" type="text" id="srvFrmdate" readonly="" value="12-02-2012">
+                <span class="input-group-addon"><i class="glyphicon  glyphicon-th"></i></span>
+
+            </div>
+        </div>
+        <div class="col-xs-2" style="float:left">
+            <label for="srvTOdate">TO</label>
+            <div class="input-group date " style="float:left">
+                <input type="text" name="srvTOdate" id="srvTOdate" readonly="" class="form-control" value="12-02-2014" />
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-th"></i>
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-2">
+            <label for="CatName">Category</label>
+            <div class="input-group" style="float:left">
+               
+                <input type="text" name="CatName" id="CatName" class="form-control" />
+            </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="input-group " style="float:left">
+                    <label for="SrvName">Service Name</label>
+                    <input type="text" name="SrvName" id="SrvName" class="form-control" />
+                </div>
+
+            </div>
+          
+        <div class="col-xs-2">
+            <label for="bb"> </label>
+            <div class="input-group" style="float:left">
+                <button id="btn" class="button btn-sm">Search</button>
+            </div>
+            </div>
+</p>
+    
+
+
+    
+
+
+
+<table id ="tbl_donation">
+
+
+
+</table>
+</div>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="55dba1a9c9d84a1aae08e1632a2433ea" Name="Diagram1">
+        <EntityTypeShape EntityType="MTSTXModel.d_appn_code" Width="1.5" PointX="6" PointY="65.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_comp" Width="1.5" PointX="3" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_memorize_filter" Width="1.5" PointX="9.75" PointY="59.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_memorize_filter_data" Width="1.5" PointX="12" PointY="61.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_memorize_filter_fonts" Width="1.5" PointX="15" PointY="61.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_prie_leave_details" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_prie_leave_recu" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_priest_info" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_publ_newsletter" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_relatives" Width="1.5" PointX="5.25" PointY="50.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_user_comp" Width="1.5" PointX="5.25" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_appl_form" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_appn_code_type" Width="1.5" PointX="3.75" PointY="66.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_appn_mailserver_mgmt" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_appn_menu_mgmt" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_category" Width="1.5" PointX="5.25" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_category_type" Width="1.5" PointX="3" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_even_recu" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_event" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_home_gallery" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_home_panel" Width="1.5" PointX="8" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_join_mail_list" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_logi" Width="1.5" PointX="5.25" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_mailgroup" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_memorize_font" Width="1.5" PointX="12.75" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_memorize_report" Width="1.5" PointX="7.5" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_memorize_reportgroup" Width="1.5" PointX="5.25" PointY="61.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_newsletter_template" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_publ" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_service" Width="1.5" PointX="8.25" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_shop_cart" Width="1.5" PointX="3" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_temple" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_Temple_BankAccounts" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_Temple_IncomeAccounts" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_Temple_QBAccountSetup" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_Temple_QBFilePath" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_time_zone" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_user" Width="1.5" PointX="3" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_ChartOfAccount" Width="1.5" PointX="3" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_ChartOfAccountMapping" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_Customer" Width="1.5" PointX="6" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_Expense" Width="1.5" PointX="8" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_Income" Width="1.5" PointX="11" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_RequestType" Width="1.5" PointX="3.75" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_Status" Width="1.5" PointX="0.75" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.sysdiagram" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_appn_code1" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_def_role_priv" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_loca_recu" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_prie_excl_service" Width="1.5" PointX="10.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_reso_recu" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.d_user_roles" Width="1.5" PointX="8.25" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_appl_mailconfig_mgmt" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_appn_mailconfig_mgmt" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_authorise_net_tran_history" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_dona_return_refund" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_dona_return_refund_History" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_dona_serv_fee" Width="1.5" PointX="3" PointY="79.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_gallery" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_Online_Event_Regi" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_reso_sche" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_shop_cart_tran" Width="1.5" PointX="3" PointY="92.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_CustomerMapping" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.QBHoma_ProcessMode" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.tmplogi" Width="1.5" PointX="8.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.walk_in_devo_info" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.vw_donationsummary" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.vw_PoojaBooking" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.vw_TransactionByNameType" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="MTSTXModel.FK_d_user_roles_d_appn_code" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_Appl_Code_m_Appl_Code_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_comp_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_user_comp_d_comp" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_memorize_filter_data_d_memorize_filter" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_memorize_filter_fonts_d_memorize_filter" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_memorize_filter_m_memorize_report" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_memorize_filter_fonts_m_memorize_font" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_relatives_m_user" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_user_comp_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_home_panel_m_appl_menu_mgmt" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_category_m_category_type" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_category_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_category_type_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_service_m_category_type" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_logi_m_user" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_memorize_report_m_memorize_reportgroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_memorize_reportgroup_m_user" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_service_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_shop_cart_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_temple_m_time_zone" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_d_user_roles_m_user" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_user_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHoma_ChartOfAccount_QBHoma_RequestType" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHoma_ChartOfAccount_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHome_Customer_QBHoma_RequestType" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHome_Customer_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHoma_Expense_QBHoma_RequestType" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHoma_Expense_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHoma_Income_QBHoma_RequestType" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_QBHoma_Income_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_dona_serv_fee_QBHoma_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MTSTXModel.FK_m_shop_cart_tran_QBHoma_Status" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

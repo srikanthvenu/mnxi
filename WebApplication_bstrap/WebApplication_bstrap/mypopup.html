@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            
+            var dialog, form
+
+            function CloseDlg() { dialog.dialog("close"); };
+
+            $("#create-user").button().on("click", function () {
+
+                dialog.dialog("open");
+
+            });
+            function OKClicked() {
+
+                var valid = true;
+                alert("Add clicked");
+ 
+                            
+                dialog.dialog("close");
+                return valid;
+
+            };
+
+            dialog = $("#dialog-form").dialog({
+
+                autoOpen: false,
+                height: 300,
+                width: 350,
+                modal: true,
+                 buttons: {
+
+                    "OK": OKClicked,
+
+                    Cancel: function () {
+
+                        dialog.dialog("close");
+
+                    }
+
+                },
+
+                close: function () {
+
+                    dialog.dialog("close");
+
+                    
+
+                }
+
+            });
+
+        });
+
+       
+       
+
+    </script>
+</head>
+<body>
+    <div id="dialog-form" title="Create new user">
+
+        <p class="validateTips">All form fields are required.</p>
+
+        <table style="width:300px">
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table> 
+        
+
+      
+
+    </div>
+
+
+    <div>
+
+        <button id="create-user">FIX OS</button>
+
+    </div>
+</body>
+</html>
