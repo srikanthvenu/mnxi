@@ -1,0 +1,152 @@
+﻿<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/datepicker.css">
+
+<link href="~/Scripts/jtable/themes/metro/blue/jtable.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/json2.js"></script>
+<link href="~/Content/chosen.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-migrate-1.2.1.js"></script>
+<script src="~/Scripts/jquery.livequery.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.js"></script>
+ 
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/bootstrpdatepicker/bootstrap-datepicker.js"></script>
+<script src="~/Scripts/noty/jquery.noty.js"></script>
+<script src="~/Scripts/noty/layouts/topCenter.js"></script>
+<script src="~/Scripts/noty/themes/default.js"></script>
+<script src="~/Scripts/noty/layouts/center.js"></script>
+<script src="~/Scripts/noty/noty_wrapper.js"></script>
+<script src="~/Scripts/jtable/jquery.jtable.js"></script>
+<script src="~/Scripts/chosen/chosen.jquery.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        $('#DonationTableContainer').jtable({
+            title: 'Donation',
+            paging: true, //Enable paging
+            pageSize: 1000,
+            sorting: true,
+            defaultSorting: 'Name ASC',
+            recordsLoaded: function (event, data) {
+                recloaded();
+
+            },
+
+
+            ///DonationMVC/GetResults
+            actions: {
+                listAction: 'GetPoojResults'
+
+            },
+
+            fields: {
+                TransId: {
+                    key: true,
+                    create: false,
+                    edit: false,
+                    list: false
+                },
+                DevoteeName: {
+                    title: 'Devotee Name',
+                    width: '23%'
+                },
+                CollectedBy: {
+                    title: 'Collected By',
+                    width: '15%',
+                },
+
+                CategoryTypeName: {
+                    title: 'Category Type',
+                    width: '15%',
+
+                },
+                CategoryName: {
+                    title: 'Category Name',
+                    width: '15%',
+
+                },
+
+                tran_date: {
+                    title: 'Record date',
+                    width: '15%',
+                    type: 'date',
+                    displayFormat: 'mm.dd.yy',
+                    create: false,
+                    edit: false,
+                    sorting: false
+
+                },
+                TotalAmount: {
+                    title: 'TotalAmount',
+                    width: '15%',
+
+
+                },
+                CategoryName: {
+                    title: 'Category',
+                    width: '15%',
+
+                },
+                ApprovalNumber: {
+                    title: 'Approval Number',
+                    width: '15%',
+
+
+
+                }
+
+            }
+        });
+        $('.date').datepicker({
+            weekStart: 2,
+            "setDate": new Date(),
+            format: 'mm/dd/yyyy',
+
+            forceParse: false,
+            autoclose: true
+        });
+
+
+    });
+
+</script>
+<div class="container " style="background-color:lightslategray;padding-bottom:20px">
+    <table id="tblSrch">
+        <tr>
+            <th>  From</th>
+            <th>  To</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="input-group date " style="float:left">
+
+                    <input class="form-control" type="text" id="srvFrmdate">
+                    <span class="input-group-addon"><i class="glyphicon  glyphicon-th"></i></span>
+
+                </div>
+            </td>
+            <td>
+
+                <div class="input-group date " style="float:left;margin-left:5px;padding-left:2px">
+
+                    <input class="form-control" type="text" id="srvToDate">
+                    <span class="input-group-addon"><i class="glyphicon  glyphicon-th"></i></span>
+
+                </div>
+
+            </td>
+            <td>
+                <button id="btn2" style="float: right; margin-left: 5px; padding-left: 2px" class="btn btn-sm">Search</button>
+            </td>
+        </tr>
+
+       
+        
+
+    </table>
+    <p>
+
+    </p>
+</div>

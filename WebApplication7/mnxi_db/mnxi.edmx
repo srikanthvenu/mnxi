@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MTSTXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="m_category">
+          <Key>
+            <PropertyRef Name="cate_id" />
+            <PropertyRef Name="cate_type_id" />
+          </Key>
+          <Property Name="cate_id" Type="int" Nullable="false" />
+          <Property Name="cate_type_id" Type="int" Nullable="false" />
+          <Property Name="cate_name" Type="varchar" MaxLength="250" />
+          <Property Name="cate_code" Type="varchar" MaxLength="10" />
+          <Property Name="is_appl_yearenddona" Type="char" MaxLength="1" />
+          <Property Name="notes" Type="varchar" MaxLength="500" />
+          <Property Name="status" Type="char" MaxLength="1" />
+          <Property Name="onlyforadmin" Type="char" MaxLength="1" />
+          <Property Name="createdby" Type="int" />
+          <Property Name="createdon" Type="datetime" />
+          <Property Name="modifiedby" Type="int" />
+          <Property Name="modifiedon" Type="datetime" />
+          <Property Name="cate_des" Type="varchar" MaxLength="500" />
+          <Property Name="is_location" Type="char" MaxLength="1" />
+          <Property Name="RequestID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="RequestStatus" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Mode" Type="bit" Nullable="false" />
+          <Property Name="QBListID" Type="varchar" MaxLength="50" />
+          <Property Name="QBEditSequence" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="m_category_type">
+          <Key>
+            <PropertyRef Name="cate_type_id" />
+          </Key>
+          <Property Name="cate_type_id" Type="int" Nullable="false" />
+          <Property Name="cate_type_name" Type="varchar" MaxLength="100" />
+          <Property Name="cate_type_code" Type="varchar" MaxLength="10" />
+          <Property Name="status" Type="char" MaxLength="1" />
+          <Property Name="createdby" Type="int" />
+          <Property Name="createdon" Type="datetime" />
+          <Property Name="modifiedby" Type="int" />
+          <Property Name="modifiedon" Type="datetime" />
+          <Property Name="menu_id" Type="int" />
+          <Property Name="catetype_desc" Type="varchar" MaxLength="500" />
+          <Property Name="catetype_note" Type="varchar" MaxLength="500" />
+          <Property Name="RequestID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="RequestStatus" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Mode" Type="bit" Nullable="false" />
+          <Property Name="QBListID" Type="varchar" MaxLength="50" />
+          <Property Name="QBEditSequence" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MTSTX.MTS.vw_donationsummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_donationsummary">
+          <Key>
+            <PropertyRef Name="OnBehalfOf" />
+            <PropertyRef Name="ReturnedAmount" />
+            <PropertyRef Name="RepaymentAmount" />
+            <PropertyRef Name="RefundedAmount" />
+            <PropertyRef Name="PayType" />
+            <PropertyRef Name="Is_kiosk" />
+            <PropertyRef Name="Mode" />
+            <PropertyRef Name="DeleteAmt" />
+            <PropertyRef Name="Bankcharges" />
+          </Key>
+          <Property Name="No" Type="bigint" />
+          <Property Name="TransactionId" Type="int" />
+          <Property Name="CategoryServiceId" Type="int" />
+          <Property Name="tran_date" Type="date" />
+          <Property Name="CategoryTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="250" />
+          <Property Name="ServiceName" Type="varchar" MaxLength="100" />
+          <Property Name="Serv_Id" Type="int" />
+          <Property Name="serv_code" Type="varchar" MaxLength="100" />
+          <Property Name="status" Type="char" MaxLength="1" />
+          <Property Name="TransactionDate" Type="varchar" MaxLength="30" />
+          <Property Name="TransactionTime" Type="varchar" MaxLength="10" />
+          <Property Name="DevoteeName" Type="varchar" MaxLength="61" />
+          <Property Name="CollectedBy" Type="varchar" MaxLength="61" />
+          <Property Name="OnBehalfOf" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tran_mode" Type="varchar" MaxLength="5" />
+          <Property Name="ApprovalNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="TotalAmount" Type="numeric" Precision="20" Scale="2" />
+          <Property Name="ReturnedAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="RepaymentAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="RefundedAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ReceiptNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Notes" Type="varchar" MaxLength="1000" />
+          <Property Name="RunningId_sc_tran_id_Trans" Type="int" />
+          <Property Name="PayType" Type="varchar" MaxLength="22" Nullable="false" />
+          <Property Name="SCid" Type="int" />
+          <Property Name="Is_kiosk" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="GrdTotal" Type="numeric" Precision="24" Scale="2" />
+          <Property Name="Mode" Type="bit" Nullable="false" />
+          <Property Name="DeleteAmt" Type="numeric" Precision="24" Scale="2" Nullable="false" />
+          <Property Name="Bankcharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="donationstatus" Type="varchar" MaxLength="50" />
+          <Property Name="OldReceiptNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Receiptnumberfilter" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MTSTX.MTS.vw_PoojaBooking' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_PoojaBooking">
+          <Key>
+            <PropertyRef Name="business_date" />
+            <PropertyRef Name="remarks" />
+            <PropertyRef Name="IsDeleted" />
+            <PropertyRef Name="Sche_Id" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="notes" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="sche_date" />
+          </Key>
+          <Property Name="business_date" Type="date" Nullable="false" />
+          <Property Name="remarks" Type="varchar" MaxLength="2000" Nullable="false" />
+          <Property Name="IsDeleted" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Sche_Id" Type="int" Nullable="false" />
+          <Property Name="DevoteeName" Type="varchar" MaxLength="61" />
+          <Property Name="PerformedDate" Type="varchar" MaxLength="30" />
+          <Property Name="ScheduledDate" Type="varchar" MaxLength="30" />
+          <Property Name="StartTime" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="EndTime" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="AssignedPriest" Type="varchar" MaxLength="61" />
+          <Property Name="ServiceName" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" MaxLength="498" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="25" />
+          <Property Name="Natshatra" Type="varchar" MaxLength="100" />
+          <Property Name="gothra" Type="varchar" MaxLength="50" />
+          <Property Name="CollectedBy" Type="varchar" MaxLength="61" />
+          <Property Name="Mode" Type="varchar" MaxLength="5" />
+          <Property Name="Approval" Type="varchar" MaxLength="50" />
+          <Property Name="type" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Receipt" Type="int" />
+          <Property Name="notes" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="SCId" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="time" Type="varchar" MaxLength="33" />
+          <Property Name="sche_date" Type="date" Nullable="false" />
+          <Property Name="start_time" Type="time" Precision="7" />
+          <Property Name="end_time" Type="time" Precision="7" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MTSTX.MTS.vw_TransactionByNameType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_TransactionByNameType">
+          <Key>
+            <PropertyRef Name="TransactionType" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="60" />
+          <Property Name="TransactionDate" Type="varchar" MaxLength="30" />
+          <Property Name="realchecknumber" Type="varchar" MaxLength="50" />
+          <Property Name="TransactionType" Type="varchar" MaxLength="24" Nullable="false" />
+          <Property Name="TotalItems" Type="int" />
+          <Property Name="Amount" Type="numeric" Precision="38" Scale="2" />
+        </EntityType>
+        <Association Name="FK_m_category_m_category_type">
+          <End Role="m_category_type" Type="Self.m_category_type" Multiplicity="1" />
+          <End Role="m_category" Type="Self.m_category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="m_category_type">
+              <PropertyRef Name="cate_type_id" />
+            </Principal>
+            <Dependent Role="m_category">
+              <PropertyRef Name="cate_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MTSTXModelStoreContainer">
+          <EntitySet Name="m_category" EntityType="Self.m_category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_category_type" EntityType="Self.m_category_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_donationsummary" EntityType="Self.vw_donationsummary" store:Type="Views" store:Schema="MTS">
+            <DefiningQuery>SELECT 
+    [vw_donationsummary].[No] AS [No], 
+    [vw_donationsummary].[TransactionId] AS [TransactionId], 
+    [vw_donationsummary].[CategoryServiceId] AS [CategoryServiceId], 
+    [vw_donationsummary].[tran_date] AS [tran_date], 
+    [vw_donationsummary].[CategoryTypeName] AS [CategoryTypeName], 
+    [vw_donationsummary].[CategoryName] AS [CategoryName], 
+    [vw_donationsummary].[ServiceName] AS [ServiceName], 
+    [vw_donationsummary].[Serv_Id] AS [Serv_Id], 
+    [vw_donationsummary].[serv_code] AS [serv_code], 
+    [vw_donationsummary].[status] AS [status], 
+    [vw_donationsummary].[TransactionDate] AS [TransactionDate], 
+    [vw_donationsummary].[TransactionTime] AS [TransactionTime], 
+    [vw_donationsummary].[DevoteeName] AS [DevoteeName], 
+    [vw_donationsummary].[CollectedBy] AS [CollectedBy], 
+    [vw_donationsummary].[OnBehalfOf] AS [OnBehalfOf], 
+    [vw_donationsummary].[Tran_mode] AS [Tran_mode], 
+    [vw_donationsummary].[ApprovalNumber] AS [ApprovalNumber], 
+    [vw_donationsummary].[Quantity] AS [Quantity], 
+    [vw_donationsummary].[Amount] AS [Amount], 
+    [vw_donationsummary].[TotalAmount] AS [TotalAmount], 
+    [vw_donationsummary].[ReturnedAmount] AS [ReturnedAmount], 
+    [vw_donationsummary].[RepaymentAmount] AS [RepaymentAmount], 
+    [vw_donationsummary].[RefundedAmount] AS [RefundedAmount], 
+    [vw_donationsummary].[ReceiptNumber] AS [ReceiptNumber], 
+    [vw_donationsummary].[Notes] AS [Notes], 
+    [vw_donationsummary].[RunningId_sc_tran_id_Trans] AS [RunningId_sc_tran_id_Trans], 
+    [vw_donationsummary].[PayType] AS [PayType], 
+    [vw_donationsummary].[SCid] AS [SCid], 
+    [vw_donationsummary].[Is_kiosk] AS [Is_kiosk], 
+    [vw_donationsummary].[GrdTotal] AS [GrdTotal], 
+    [vw_donationsummary].[Mode] AS [Mode], 
+    [vw_donationsummary].[DeleteAmt] AS [DeleteAmt], 
+    [vw_donationsummary].[Bankcharges] AS [Bankcharges], 
+    [vw_donationsummary].[donationstatus] AS [donationstatus], 
+    [vw_donationsummary].[OldReceiptNumber] AS [OldReceiptNumber], 
+    [vw_donationsummary].[Receiptnumberfilter] AS [Receiptnumberfilter]
+    FROM [MTS].[vw_donationsummary] AS [vw_donationsummary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_PoojaBooking" EntityType="Self.vw_PoojaBooking" store:Type="Views" store:Schema="MTS">
+            <DefiningQuery>SELECT 
+    [vw_PoojaBooking].[business_date] AS [business_date], 
+    [vw_PoojaBooking].[remarks] AS [remarks], 
+    [vw_PoojaBooking].[IsDeleted] AS [IsDeleted], 
+    [vw_PoojaBooking].[Sche_Id] AS [Sche_Id], 
+    [vw_PoojaBooking].[DevoteeName] AS [DevoteeName], 
+    [vw_PoojaBooking].[PerformedDate] AS [PerformedDate], 
+    [vw_PoojaBooking].[ScheduledDate] AS [ScheduledDate], 
+    [vw_PoojaBooking].[StartTime] AS [StartTime], 
+    [vw_PoojaBooking].[EndTime] AS [EndTime], 
+    [vw_PoojaBooking].[AssignedPriest] AS [AssignedPriest], 
+    [vw_PoojaBooking].[ServiceName] AS [ServiceName], 
+    [vw_PoojaBooking].[Address] AS [Address], 
+    [vw_PoojaBooking].[EmailId] AS [EmailId], 
+    [vw_PoojaBooking].[Phone] AS [Phone], 
+    [vw_PoojaBooking].[Natshatra] AS [Natshatra], 
+    [vw_PoojaBooking].[gothra] AS [gothra], 
+    [vw_PoojaBooking].[CollectedBy] AS [CollectedBy], 
+    [vw_PoojaBooking].[Mode] AS [Mode], 
+    [vw_PoojaBooking].[Approval] AS [Approval], 
+    [vw_PoojaBooking].[type] AS [type], 
+    [vw_PoojaBooking].[Amount] AS [Amount], 
+    [vw_PoojaBooking].[Receipt] AS [Receipt], 
+    [vw_PoojaBooking].[notes] AS [notes], 
+    [vw_PoojaBooking].[SCId] AS [SCId], 
+    [vw_PoojaBooking].[Status] AS [Status], 
+    [vw_PoojaBooking].[time] AS [time], 
+    [vw_PoojaBooking].[sche_date] AS [sche_date], 
+    [vw_PoojaBooking].[start_time] AS [start_time], 
+    [vw_PoojaBooking].[end_time] AS [end_time]
+    FROM [MTS].[vw_PoojaBooking] AS [vw_PoojaBooking]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_TransactionByNameType" EntityType="Self.vw_TransactionByNameType" store:Type="Views" store:Schema="MTS">
+            <DefiningQuery>SELECT 
+    [vw_TransactionByNameType].[name] AS [name], 
+    [vw_TransactionByNameType].[TransactionDate] AS [TransactionDate], 
+    [vw_TransactionByNameType].[realchecknumber] AS [realchecknumber], 
+    [vw_TransactionByNameType].[TransactionType] AS [TransactionType], 
+    [vw_TransactionByNameType].[TotalItems] AS [TotalItems], 
+    [vw_TransactionByNameType].[Amount] AS [Amount]
+    FROM [MTS].[vw_TransactionByNameType] AS [vw_TransactionByNameType]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_m_category_m_category_type" Association="Self.FK_m_category_m_category_type">
+            <End Role="m_category_type" EntitySet="m_category_type" />
+            <End Role="m_category" EntitySet="m_category" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MTSTXModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vw_donationsummary">
+          <Key>
+            <PropertyRef Name="OnBehalfOf" />
+            <PropertyRef Name="ReturnedAmount" />
+            <PropertyRef Name="RepaymentAmount" />
+            <PropertyRef Name="RefundedAmount" />
+            <PropertyRef Name="PayType" />
+            <PropertyRef Name="Is_kiosk" />
+            <PropertyRef Name="Mode" />
+            <PropertyRef Name="DeleteAmt" />
+            <PropertyRef Name="Bankcharges" />
+          </Key>
+          <Property Name="No" Type="Int64" />
+          <Property Name="TransactionId" Type="Int32" />
+          <Property Name="CategoryServiceId" Type="Int32" />
+          <Property Name="tran_date" Type="DateTime" Precision="0" />
+          <Property Name="CategoryTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ServiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Serv_Id" Type="Int32" />
+          <Property Name="serv_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TransactionDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TransactionTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DevoteeName" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="CollectedBy" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="OnBehalfOf" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tran_mode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ApprovalNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="ReturnedAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="RepaymentAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="RefundedAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ReceiptNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="RunningId_sc_tran_id_Trans" Type="Int32" />
+          <Property Name="PayType" Type="String" MaxLength="22" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SCid" Type="Int32" />
+          <Property Name="Is_kiosk" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GrdTotal" Type="Decimal" Precision="24" Scale="2" />
+          <Property Name="Mode" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteAmt" Type="Decimal" Precision="24" Scale="2" Nullable="false" />
+          <Property Name="Bankcharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="donationstatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OldReceiptNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Receiptnumberfilter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vw_PoojaBooking">
+          <Key>
+            <PropertyRef Name="business_date" />
+            <PropertyRef Name="remarks" />
+            <PropertyRef Name="IsDeleted" />
+            <PropertyRef Name="Sche_Id" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="notes" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="sche_date" />
+          </Key>
+          <Property Name="business_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="remarks" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsDeleted" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Sche_Id" Type="Int32" Nullable="false" />
+          <Property Name="DevoteeName" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="PerformedDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ScheduledDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="StartTime" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EndTime" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssignedPriest" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="ServiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="498" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Natshatra" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="gothra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CollectedBy" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="Mode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Approval" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Receipt" Type="Int32" />
+          <Property Name="notes" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SCId" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+          <Property Name="sche_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="start_time" Type="Time" Precision="7" />
+          <Property Name="end_time" Type="Time" Precision="7" />
+        </EntityType>
+        <EntityType Name="vw_TransactionByNameType">
+          <Key>
+            <PropertyRef Name="TransactionType" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TransactionDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="realchecknumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransactionType" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TotalItems" Type="Int32" />
+          <Property Name="Amount" Type="Decimal" Precision="38" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="MTSTXEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vw_donationsummary" EntityType="Self.vw_donationsummary" />
+          <EntitySet Name="vw_PoojaBooking" EntityType="Self.vw_PoojaBooking" />
+          <EntitySet Name="vw_TransactionByNameType" EntityType="Self.vw_TransactionByNameType" />
+          <EntitySet Name="m_category" EntityType="MTSTXModel.m_category" />
+          <EntitySet Name="m_category_type" EntityType="MTSTXModel.m_category_type" />
+          <AssociationSet Name="FK_m_category_m_category_type" Association="MTSTXModel.FK_m_category_m_category_type">
+            <End Role="m_category_type" EntitySet="m_category_type" />
+            <End Role="m_category" EntitySet="m_category" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="m_category">
+          <Key>
+            <PropertyRef Name="cate_id" />
+            <PropertyRef Name="cate_type_id" />
+          </Key>
+          <Property Name="cate_id" Type="Int32" Nullable="false" />
+          <Property Name="cate_type_id" Type="Int32" Nullable="false" />
+          <Property Name="cate_name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="cate_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="is_appl_yearenddona" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="notes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="onlyforadmin" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="createdby" Type="Int32" />
+          <Property Name="createdon" Type="DateTime" Precision="3" />
+          <Property Name="modifiedby" Type="Int32" />
+          <Property Name="modifiedon" Type="DateTime" Precision="3" />
+          <Property Name="cate_des" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="is_location" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RequestID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RequestStatus" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Mode" Type="Boolean" Nullable="false" />
+          <Property Name="QBListID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QBEditSequence" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="m_category_type" Relationship="MTSTXModel.FK_m_category_m_category_type" FromRole="m_category" ToRole="m_category_type" />
+        </EntityType>
+        <EntityType Name="m_category_type">
+          <Key>
+            <PropertyRef Name="cate_type_id" />
+          </Key>
+          <Property Name="cate_type_id" Type="Int32" Nullable="false" />
+          <Property Name="cate_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cate_type_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="createdby" Type="Int32" />
+          <Property Name="createdon" Type="DateTime" Precision="3" />
+          <Property Name="modifiedby" Type="Int32" />
+          <Property Name="modifiedon" Type="DateTime" Precision="3" />
+          <Property Name="menu_id" Type="Int32" />
+          <Property Name="catetype_desc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="catetype_note" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RequestID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RequestStatus" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Mode" Type="Boolean" Nullable="false" />
+          <Property Name="QBListID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QBEditSequence" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="m_category" Relationship="MTSTXModel.FK_m_category_m_category_type" FromRole="m_category_type" ToRole="m_category" />
+        </EntityType>
+        <Association Name="FK_m_category_m_category_type">
+          <End Type="MTSTXModel.m_category_type" Role="m_category_type" Multiplicity="1" />
+          <End Type="MTSTXModel.m_category" Role="m_category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="m_category_type">
+              <PropertyRef Name="cate_type_id" />
+            </Principal>
+            <Dependent Role="m_category">
+              <PropertyRef Name="cate_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MTSTXModelStoreContainer" CdmEntityContainer="MTSTXEntities">
+          <EntitySetMapping Name="vw_donationsummary">
+            <EntityTypeMapping TypeName="MTSTXModel.vw_donationsummary">
+              <MappingFragment StoreEntitySet="vw_donationsummary">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="CategoryServiceId" ColumnName="CategoryServiceId" />
+                <ScalarProperty Name="tran_date" ColumnName="tran_date" />
+                <ScalarProperty Name="CategoryTypeName" ColumnName="CategoryTypeName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="Serv_Id" ColumnName="Serv_Id" />
+                <ScalarProperty Name="serv_code" ColumnName="serv_code" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="TransactionTime" ColumnName="TransactionTime" />
+                <ScalarProperty Name="DevoteeName" ColumnName="DevoteeName" />
+                <ScalarProperty Name="CollectedBy" ColumnName="CollectedBy" />
+                <ScalarProperty Name="OnBehalfOf" ColumnName="OnBehalfOf" />
+                <ScalarProperty Name="Tran_mode" ColumnName="Tran_mode" />
+                <ScalarProperty Name="ApprovalNumber" ColumnName="ApprovalNumber" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="ReturnedAmount" ColumnName="ReturnedAmount" />
+                <ScalarProperty Name="RepaymentAmount" ColumnName="RepaymentAmount" />
+                <ScalarProperty Name="RefundedAmount" ColumnName="RefundedAmount" />
+                <ScalarProperty Name="ReceiptNumber" ColumnName="ReceiptNumber" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="RunningId_sc_tran_id_Trans" ColumnName="RunningId_sc_tran_id_Trans" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="SCid" ColumnName="SCid" />
+                <ScalarProperty Name="Is_kiosk" ColumnName="Is_kiosk" />
+                <ScalarProperty Name="GrdTotal" ColumnName="GrdTotal" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="DeleteAmt" ColumnName="DeleteAmt" />
+                <ScalarProperty Name="Bankcharges" ColumnName="Bankcharges" />
+                <ScalarProperty Name="donationstatus" ColumnName="donationstatus" />
+                <ScalarProperty Name="OldReceiptNumber" ColumnName="OldReceiptNumber" />
+                <ScalarProperty Name="Receiptnumberfilter" ColumnName="Receiptnumberfilter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_PoojaBooking">
+            <EntityTypeMapping TypeName="MTSTXModel.vw_PoojaBooking">
+              <MappingFragment StoreEntitySet="vw_PoojaBooking">
+                <ScalarProperty Name="business_date" ColumnName="business_date" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Sche_Id" ColumnName="Sche_Id" />
+                <ScalarProperty Name="DevoteeName" ColumnName="DevoteeName" />
+                <ScalarProperty Name="PerformedDate" ColumnName="PerformedDate" />
+                <ScalarProperty Name="ScheduledDate" ColumnName="ScheduledDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="AssignedPriest" ColumnName="AssignedPriest" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Natshatra" ColumnName="Natshatra" />
+                <ScalarProperty Name="gothra" ColumnName="gothra" />
+                <ScalarProperty Name="CollectedBy" ColumnName="CollectedBy" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="Approval" ColumnName="Approval" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="SCId" ColumnName="SCId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="sche_date" ColumnName="sche_date" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="end_time" ColumnName="end_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_TransactionByNameType">
+            <EntityTypeMapping TypeName="MTSTXModel.vw_TransactionByNameType">
+              <MappingFragment StoreEntitySet="vw_TransactionByNameType">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="realchecknumber" ColumnName="realchecknumber" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+                <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_category">
+            <EntityTypeMapping TypeName="MTSTXModel.m_category">
+              <MappingFragment StoreEntitySet="m_category">
+                <ScalarProperty Name="QBEditSequence" ColumnName="QBEditSequence" />
+                <ScalarProperty Name="QBListID" ColumnName="QBListID" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+                <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+                <ScalarProperty Name="is_location" ColumnName="is_location" />
+                <ScalarProperty Name="cate_des" ColumnName="cate_des" />
+                <ScalarProperty Name="modifiedon" ColumnName="modifiedon" />
+                <ScalarProperty Name="modifiedby" ColumnName="modifiedby" />
+                <ScalarProperty Name="createdon" ColumnName="createdon" />
+                <ScalarProperty Name="createdby" ColumnName="createdby" />
+                <ScalarProperty Name="onlyforadmin" ColumnName="onlyforadmin" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="is_appl_yearenddona" ColumnName="is_appl_yearenddona" />
+                <ScalarProperty Name="cate_code" ColumnName="cate_code" />
+                <ScalarProperty Name="cate_name" ColumnName="cate_name" />
+                <ScalarProperty Name="cate_type_id" ColumnName="cate_type_id" />
+                <ScalarProperty Name="cate_id" ColumnName="cate_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_category_type">
+            <EntityTypeMapping TypeName="MTSTXModel.m_category_type">
+              <MappingFragment StoreEntitySet="m_category_type">
+                <ScalarProperty Name="QBEditSequence" ColumnName="QBEditSequence" />
+                <ScalarProperty Name="QBListID" ColumnName="QBListID" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+                <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+                <ScalarProperty Name="catetype_note" ColumnName="catetype_note" />
+                <ScalarProperty Name="catetype_desc" ColumnName="catetype_desc" />
+                <ScalarProperty Name="menu_id" ColumnName="menu_id" />
+                <ScalarProperty Name="modifiedon" ColumnName="modifiedon" />
+                <ScalarProperty Name="modifiedby" ColumnName="modifiedby" />
+                <ScalarProperty Name="createdon" ColumnName="createdon" />
+                <ScalarProperty Name="createdby" ColumnName="createdby" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="cate_type_code" ColumnName="cate_type_code" />
+                <ScalarProperty Name="cate_type_name" ColumnName="cate_type_name" />
+                <ScalarProperty Name="cate_type_id" ColumnName="cate_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

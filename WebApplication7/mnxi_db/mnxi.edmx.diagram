@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="354edb09db084b4dae536e4ca74156b7" Name="Diagram1" ZoomLevel="112">
+        <EntityTypeShape EntityType="MTSTXModel.vw_donationsummary" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.vw_PoojaBooking" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.vw_TransactionByNameType" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTSTXModel.m_category" Width="1.5" PointX="7.625" PointY="4.125" />
+        <EntityTypeShape EntityType="MTSTXModel.m_category_type" Width="1.5" PointX="5.375" PointY="4.375" />
+        <AssociationConnector Association="MTSTXModel.FK_m_category_m_category_type" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

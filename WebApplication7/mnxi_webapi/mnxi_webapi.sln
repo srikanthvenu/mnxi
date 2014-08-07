@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mnxi_webapi", "mnxi_webapi.csproj", "{DF41E4B2-EDD9-42C2-9179-24F5AE547549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mnxi_db", "..\mnxi_db\mnxi_db.csproj", "{0F9D2013-B214-4D70-A94A-BB2984537670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF41E4B2-EDD9-42C2-9179-24F5AE547549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF41E4B2-EDD9-42C2-9179-24F5AE547549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF41E4B2-EDD9-42C2-9179-24F5AE547549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF41E4B2-EDD9-42C2-9179-24F5AE547549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F9D2013-B214-4D70-A94A-BB2984537670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9D2013-B214-4D70-A94A-BB2984537670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9D2013-B214-4D70-A94A-BB2984537670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9D2013-B214-4D70-A94A-BB2984537670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
